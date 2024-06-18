@@ -1,0 +1,272 @@
+/* to apply these setting in all formats  */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+
+/* body changes through following properties */
+
+body {
+  background: url(background.jpg) top no-repeat;
+  background-size: cover;
+  height: 150vh;
+}
+
+/* making navbar through css properties  */
+nav {
+  height: 15vh;
+  width: 100%;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  top: 0;
+  justify-content: space-between;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.37);
+  backdrop-filter: blur(20px);
+}
+
+/* logo in navbar */
+.logo {
+  width: 40%;
+  height: 100%;
+  margin-left: 0.5rem;
+}
+.logo:hover{
+  scale : 1.1;
+}
+.logo:active{
+  scale : 0.8;
+}
+.logo_container {
+  width: 30%;
+  height: 15vh;
+}
+
+/* search bar in navbar  */
+
+.inp {
+  padding: 0.30rem 0.8rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  border: none;
+  font-size: 1.2rem;
+  border: 2px solid rgba(0, 0, 0, 0.692);
+  border-radius: 1rem 0rem 0rem 1rem;
+  box-shadow: 2px 2px 50px black;
+}
+
+.inp:focus-visible {
+  border: 2px solid blue;
+}
+
+.inp::placeholder {
+  color: black;
+}
+
+.searchLogo {
+  height: 30px;
+  width: 30px;
+}
+
+.searchLogo_container {
+  position: absolute;
+  top: 25%;
+  background-color: rgba(0, 0, 0, 0.555);
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  scale: 0.8;
+  left: 56%;
+  border-radius: 0rem 1rem 1rem 0rem;
+}
+
+.inp:focus-visible .searchLogo_container {
+  background-color: rgba(0, 0, 255, 0.5);
+}
+
+.search_container {
+  margin-left: -18rem;
+
+}
+
+.searchLogo:active {
+  scale: 0.8;
+}
+
+li::marker {
+  content: '';
+}
+
+ul {
+  display: flex;
+  gap: 1rem;
+  margin-right: 2rem;
+}
+
+li {
+  font-size: 1.3rem;
+  text-shadow: 5px 5px 20px black;
+}
+
+li:hover {
+  scale: 1.2;
+}
+
+.make_slide {
+  animation: sliding 1s 1;
+  padding: 0.3rem 0.8rem;
+  border: 2px solid rgba(0, 0, 0, 0.555)e;
+  border-radius: 1rem 0rem 0rem 1rem;
+  font-size: 1.2rem;
+  box-shadow: 2px 2px 20px lightgray;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#dollar:hover {
+  transform: rotateY(720deg);
+  scale: 1.38;
+}
+
+.input_container {
+  overflow: hidden;
+}
+
+#profile:hover {
+  transform: rotate(360deg);
+  transition: all 1s ease-in-out;
+}
+
+#car:hover {
+  animation: translator 2s 1;
+}
+
+
+/* next part of the body  */
+.rec_text {
+  height: 6vh;
+  width: 100%;
+  margin-top: 7.5%;
+  background-color: rgba(0, 0, 0, 0.74);
+  backdrop-filter: blur(20px);
+  color: lightslategrey;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 0.15rem 0.8rem;
+  font-size: 1.5rem;
+}
+
+.rec_txt:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color : white;
+}
+
+/* all_container */
+.img{
+  width: 11rem;
+  height: 11rem;
+}
+.img:hover{
+  cursor: pointer;
+  scale : 1.2;
+}
+
+.img2{
+  width: 11rem;
+  height: 11rem;
+}
+.img2:hover{
+  cursor: pointer;
+  scale : 1.1;
+}
+
+.img_area{
+  width: 11rem;
+  height: 11rem;
+  overflow: hidden;
+  border: 2px solid black;
+  border-radius: 1.5rem;
+}
+
+.txt_make{
+  color : white;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+  text-shadow: 5px 5px 20px black;
+}
+
+
+.flex{
+  display: flex;
+  justify-content: space-around;
+}
+.white{
+  background-color: white;
+}
+.last_make{
+  background-color: rgba(0, 0, 0, 0.781);
+  width : 100%;
+  height: 64.3vh;
+  color : lightgray;
+}
+.txt_area:active{
+  scale : 1.1;
+  text-align: center;
+}
+.txt_area{
+  text-align: center;
+}
+.common{
+  background-color: white;
+  height: 80vh;
+  position: absolute;
+  top : 10%;
+  overflow: scroll;
+  display: none;
+  left: 20%;
+  width: 60%;
+  border: 2px solid black;
+  padding: 0.8rem 1.5rem;
+  border-radius: 1.5rem;
+}
+/* animations there in our site  */
+
+@keyframes sliding {
+  0% {
+    scale: 0;
+  }
+
+  50% {
+    scale: 1.2;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+@keyframes translator {
+  0% {
+    transform: none;
+  }
+
+  33% {
+    transform: translateX(2rem);
+  }
+
+  66% {
+    transform: translateX(-2rem);
+  }
+
+  100% {
+    transform: translateX(0rem);
+  }
+
+}
+
+/* scrollbar edit */
+::-webkit-scrollbar{
+  width: 10px;
+  height: 10px;
+
+}
